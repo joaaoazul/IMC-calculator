@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC Calc</title>
+    <script src="./resources/scripts/script.js"></script>
+    <link rel="stylesheet" href="./resources/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div id="height">
+                <h3 id="heighter">Introduz a tua altura</h3>
+                <input type="number" placeholder="cm" id="altura" required>
+
+            </div>
+
+            <div id="weight">
+                <h3 id="weighter">Introduz o teu peso</h3>
+                <input type="number" name="peso" id="peso" placeholder="kg" required step="0.1">
+
+            </div>
+
+            <button onclick="calcularIMC()">Calcular</button>
+            
+            <div id="resultado" class="resultado">
+
+            </div>
+            <div class="barra-imc">
+                <div class="indicador" id="indicador"></div>
+            </div>
+            <div class="legenda">
+                <span>Abaixo do peso</span>
+                <span>Peso normal</span>
+                <span>Sobrepeso</span>
+                <span>Obesidade</span>
+                <span>Obesidade Grave</span>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>

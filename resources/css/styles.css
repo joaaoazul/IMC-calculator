@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    font-family: "Outfit", sans-serif;
+    font-size: 30px;
+}
+.container {
+    max-width: 400px;
+    margin: auto;
+}
+.barra-imc {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to right, 
+        #87CEEB 0%,   /* Azul Claro (Abaixo do Peso) */
+        #32CD32 25%,  /* Verde (Normal) */
+        #FFD700 50%,  /* Amarelo (Sobrepeso) */
+        #FF4500 75%,  /* Laranja (Obesidade) */
+        #8B0000 100%  /* Vermelho Escuro (Obesidade Grave) */
+    );
+    border-radius: 15px;
+    margin-top: 20px;
+    position: relative;
+}
+.indicador {
+    position: absolute;
+    top: -10px;
+    width: 15px;
+    height: 50px;
+    background: black;
+    border-radius: 5px;
+    transition: left 0.5s ease-in-out;
+}
+.legenda {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.resultado {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+  
+  
+  
