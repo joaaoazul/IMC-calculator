@@ -1,12 +1,21 @@
-function landingPage(){
- document.getElementById('clica').addEventListener('click', 'keydown', function(event){
-    if(event.key === 'Enter'){
-        display.
- }});
+let btn = document.getElementById("btn").addEventListener("click", showCalculator);
+let page = document.getElementById("landing-page");
+let calculator = document.getElementById("imc-calc");
+
+function showCalculator() {
+  if (!page.classList.contains('hidden')) {
+    page.classList.add('hidden');
+    calculator.classList.remove('hidden');
+    
+    // Garante que display:block seja aplicado após a transição
+    setTimeout(() => {
+      calculator.style.display = "block";
+    }, 300); // Duração igual à transição (0.3s)
+  }
 }
 
 
-
+// Função para calcular o IMC
 function calcularIMC() {
     let altura = document.getElementById("altura").value;
     let peso = document.getElementById("peso").value;
@@ -35,19 +44,19 @@ function calcularIMC() {
     // Calcular a posição do indicador na barra
     if (imc < 18.5) {
         classificacao = "Abaixo do peso";
-        posicao = (imc - 10) / 30 * 100; // Mapeando o IMC para a barra
+        posicao = (imc / 18.5) * 10; // Mapeando o IMC para a barra
     } else if (imc < 24.9) {
         classificacao = "Peso normal";
-        posicao = (imc - 18.5) / 6.4 * 100 + 10; // Ajuste a posição para o intervalo de Peso Normal
+        posicao = 10 + ((imc - 18.5) / (24.9 - 18.5)) * 25; // Ajuste a posição para o intervalo de Peso Normal
     } else if (imc < 29.9) {
         classificacao = "Sobrepeso";
-        posicao = (imc - 24.9) / 5 * 100 + 35; // Ajuste para Sobrepeso
+        posicao = 35 + ((imc - 24.9) / (29.9 - 24.9)) * 25; // Ajuste para Sobrepeso
     } else if (imc < 39.9) {
         classificacao = "Obesidade";
-        posicao = (imc - 29.9) / 10 * 100 + 60; // Ajuste para Obesidade
+        posicao = 60 + ((imc - 29.9) / (39.9 - 29.9)) * 25; // Ajuste para Obesidade
     } else {
         classificacao = "Obesidade Grave";
-        posicao = (imc - 39.9) / 5 * 100 + 85; // Ajuste para Obesidade Grave
+        posicao = 85 + ((imc - 39.9) / (maxWeight - 39.9)) * 15; // Ajuste para Obesidade Grave
     }
 
     // Clamp position to be between 0% and 100%
@@ -57,16 +66,3 @@ function calcularIMC() {
     document.getElementById("resultado").innerHTML = `IMC: ${imc} - ${classificacao}`;
     indicador.style.left = posicao + "%"; // Posicionar o indicador na barra
 }
-
-// Add event listeners for Enter key
-document.getElementById("altura").addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        calcularIMC(); // Call the function directly
-    }
-});
-
-document.getElementById("peso").addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        calcularIMC(); // Call the function directly
-    }
-});

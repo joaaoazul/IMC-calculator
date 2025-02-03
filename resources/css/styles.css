@@ -1,14 +1,48 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
     font-family: "Outfit", sans-serif;
     font-size: 30px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    background-color: #247291;
+    color: #eef2e2;
 }
+
+#landing-page, #imc-calc {
+    width: 100%;
+    max-width: 400px; /* Mantém a largura máxima */
+    position: relative;
+    margin: 20px 0; /* Espaçamento vertical entre elementos */
+}
+
+#imc-calc {
+    bottom: 80px; /* Esconde o formulário de cálculo */
+}
+
+/* Remova as propriedades bottom/top !important */
 .container {
     max-width: 400px;
+    margin: 0 auto; /* Centraliza horizontalmente dentro do container */
+    padding: 10px 0;
     margin: auto;
+    bottom: 150px;
 }
+
+#landing-page, #imc-calc {
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+    opacity: 1;
+    visibility: visible;
+}
+
+#landing-page.hidden, #imc-calc.hidden {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute; /* Remove do fluxo do documento quando escondido */
+}
+
 .barra-imc {
     position: relative;
     width: 100%;
@@ -44,6 +78,31 @@ body {
     font-weight: bold;
     margin-top: 15px;
 }
-  
+
+#btn-calc {
+    width: 50%;
+    height: 40px;
+    background: #f8da5b;
+    color: black;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#btn{
+    width: 50%;
+    height: 40px;
+    background: #f8da5b;
+    color: black;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)  
+}
   
   

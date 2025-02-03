@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMC Calc</title>
-    <script src="./resources/scripts/script.js"></script>
     <link rel="stylesheet" href="./resources/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section>
+    <div id="landing-page">
+        <h1>Calculadora de IMC</h1>
+        <button id="btn">Começar</button>
+
+    </div>
+    <section id="imc-calc" style="display: none;">
         <div class="container">
             <div id="height">
                 <h3 id="heighter">Introduz a tua altura</h3>
@@ -25,7 +29,7 @@
 
             </div>
 
-            <button onclick="calcularIMC()">Calcular</button>
+            <button id="btn-calc" onclick="calcularIMC()">Calcular</button>
             
             <div id="resultado" class="resultado">
 
@@ -44,4 +48,5 @@
 
     </section>
 </body>
+<script src="./resources/scripts/script.js"></script>
 </html>
