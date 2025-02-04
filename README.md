@@ -4,7 +4,7 @@ Uma calculadora interativa de **IMC (Índice de Massa Corporal)**, desenvolvida 
 
 ## 📚 Sobre o Projeto
 
-Este projeto faz parte do meu portfólio e tem como objetivo **fornecer uma ferramenta simples e eficaz** para calcular o IMC. Ele segue as faixas padronizadas pela OMS, usando uma barra colorida para representar os diferentes níveis do IMC.
+Este projeto faz parte do portfólio e tem como objetivo **fornecer uma ferramenta simples e eficaz** para calcular o IMC. Ele segue as faixas padronizadas pela OMS, usando uma barra colorida para representar os diferentes níveis do IMC.
 
 ## 📝 Funcionalidades
 
